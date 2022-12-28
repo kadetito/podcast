@@ -2,15 +2,15 @@ import React from "react";
 import { usePodcasts } from "../hooks/usePodcasts";
 import { Feed } from "../../interface/podcast";
 
-export const getPodcastByTitle = (title: string = "") => {
+export const getPodcastByTitle = (title: any = "") => {
   const { pods, isLoading, startLoadingPodcasts } = usePodcasts();
 
-  title = title.toString().toLocaleLowerCase().trim();
-  console.log("tit", title);
-  if (title.length === 0) {
+  if (title === undefined) {
     return pods;
   }
+  title = title.toString().toLocaleLowerCase().trim();
 
+  console.log("title", title);
   return pods.filter((pod: any) =>
     pod.title.label.toLocaleLowerCase().includes(title)
   );

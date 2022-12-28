@@ -23,7 +23,9 @@ export const EpisodesList = () => {
             <div key={index}>
               <Row>
                 <Col>
-                  <Link to={`/${podcastId}/${pd.trackId}`}>{pd.trackName}</Link>
+                  <Link to={`/podcast/${podcastId}/${pd.trackId}`}>
+                    {pd.trackName}
+                  </Link>
                 </Col>
                 <Col>{moment(pd.releaseDate).format("DD/MM/YYYY")}</Col>
                 {/* <Col>{pd.trackTimeMillis}</Col> */}

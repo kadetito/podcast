@@ -10,20 +10,25 @@ import { EpisodesList } from "../components/EpisodesList";
 import { useEpisodes } from "../hooks/useEpisdes";
 
 export const Episode = () => {
-  // const { podcastId } = useParams();
+  const { podcastId, episodeId } = useParams();
   // const pod = getPodcastById(podcastId);
   // const { episodes, isLoading } = useEpisodes();
   // if (!pod) {
   //   return <>Not found</>;
   // }
-
+  console.log(podcastId, episodeId);
   return (
     <GeneralLayout>
-      {/* <Breadcrumb className="mt-2 mb-5">
-        <Breadcrumb.Item href="/">Podcast List</Breadcrumb.Item>
-        <Breadcrumb.Item active>{pod.title.label}</Breadcrumb.Item>
-      </Breadcrumb> */}
-
+      <>
+        <Breadcrumb className="mt-2 mb-5">
+          <Breadcrumb.Item href="/">Podcast List</Breadcrumb.Item>
+          <Breadcrumb.Item href={`/podcast/${podcastId}`}>
+            {podcastId}
+          </Breadcrumb.Item>
+        </Breadcrumb>
+        {podcastId}
+        {episodeId}
+      </>
       {/* <Row>
         <Col md={3}>
           <Card className="pod__detail">
