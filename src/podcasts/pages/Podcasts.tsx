@@ -1,20 +1,16 @@
-import { Container, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+import { Header } from "../components";
+import { PodcastsList } from "../components/PodcastsList";
+import { SearchInput } from "../components/SearchInput";
 
 export const Podcasts = () => {
   return (
-    <Container>
-      <Row>
-        <Col className="border-bottom pb-3 pt-3">
-          <h4>Podcaster</h4>
-        </Col>
-      </Row>
-      <Row>
-        <Col>Search</Col>
-      </Row>
+    <>
+      <Header />
 
-      <Row>
-        <Col>Grid</Col>
-      </Row>
-    </Container>
+      <PodcastsList />
+    </>
   );
 };

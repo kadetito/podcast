@@ -1,0 +1,47 @@
+.brand_link {
+  text-decoration: none;
+}
+
+.pod__list {
+  .pod__imagepodcast {
+    margin-top: -50px;
+  }
+
+  h5 {
+    font-size: 15px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 40px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    .card-body {
+      background-color: white;
+    }
+    h5 {
+      color: #000;
+    }
+    h6 {
+      color: #666666;
+    }
+  }
+  a:hover {
+    .card-body {
+      background-color: #f3f3f3;
+    }
+    h5 {
+      color: #666666;
+    }
+    h6 {
+      color: #a7a7a7;
+    }
+  }
+}

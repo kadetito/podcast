@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { Podcasts } from "../podcasts/pages/Podcasts";
 
+import { PodcastsRoutes } from "../podcasts/routes/PodcastsRoutes";
+
+//this router is created for the login auth possibility
 export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Podcasts />}></Route>
+        <Route path="/*" element={<PodcastsRoutes />}></Route>
       </Routes>
     </>
   );
