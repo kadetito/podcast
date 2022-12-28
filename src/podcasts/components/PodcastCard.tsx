@@ -15,7 +15,7 @@ interface Props {
   image: IMImage[];
 }
 
-export const PodcastCard: FC<Props> = ({ pd, id, image }) => {
+export const PodcastCard: FC<Props> = ({ pd, id, image, podcastId }) => {
   return (
     <Col
       md={3}

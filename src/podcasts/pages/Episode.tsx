@@ -9,22 +9,22 @@ import { Feed, ID, IMImage } from "../../interface/podcast";
 import { EpisodesList } from "../components/EpisodesList";
 import { useEpisodes } from "../hooks/useEpisdes";
 
-export const Podcast = () => {
-  const { podcastId } = useParams();
-  const pod = getPodcastById(podcastId);
-  const { episodes, isLoading } = useEpisodes();
-  if (!pod) {
-    return <>Not found</>;
-  }
+export const Episode = () => {
+  // const { podcastId } = useParams();
+  // const pod = getPodcastById(podcastId);
+  // const { episodes, isLoading } = useEpisodes();
+  // if (!pod) {
+  //   return <>Not found</>;
+  // }
 
   return (
     <GeneralLayout>
-      <Breadcrumb className="mt-2 mb-5">
+      {/* <Breadcrumb className="mt-2 mb-5">
         <Breadcrumb.Item href="/">Podcast List</Breadcrumb.Item>
         <Breadcrumb.Item active>{pod.title.label}</Breadcrumb.Item>
-      </Breadcrumb>
+      </Breadcrumb> */}
 
-      <Row>
+      {/* <Row>
         <Col md={3}>
           <Card className="pod__detail">
             <Card.Body>
@@ -64,7 +64,7 @@ export const Podcast = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
     </GeneralLayout>
   );
 };
